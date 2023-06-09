@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans:wght@300;400;700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Acme', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+  /* border: 1px solid red; */
+  background-color: var(--color1);
+  color: var(--white);
+}
+
+:root {
+  --color1:#27374D;
+  --color2: #526D82;
+  --color3: #9DB2BF;
+  --color4: #DDE6ED;
+  --white: #fdfdfd;
+}
+
+/* NAVBAR SECTION */
+
+.navbar-collapse {
+  justify-content: right;
+  padding-right: 20px;
+}
+
+.navbar-collapse .navbar-nav {
+  text-align: right;
+}
+
+.container-fluid a {
+  color: var(--white);
+}
+
+.container-fluid button {
+  color: var(--white);
+}
+
+
+
+
+/* HERO SECTION */
+.hero-div {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 3rem 1rem;
+}
+
+.picture-div img {
+  height: 100%;
+  width: 100%;
+}
+
+.text-div {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+  gap: 10px;
+}
+
+.text-div h1 {
+  font-family: 'Acme', sans-serif;
+  font-size: clamp(1.5rem, 0.55rem + 4.75vw, 6.25rem);
+}
+
+.text-div button {
+  background-color: var(--color3);
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid var(--white);
+} 
+
+.text-div button:hover {
+  background-color: var(--color2);
+  border: 1px solid var(--white);
+  color: var(--white);
+
+}
