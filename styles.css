@@ -5,9 +5,9 @@
   --color-1: #222222;
   --color-2:#04293A;
   --color-3:#064663;
-  --color-4:#F4DFB1;
+  --color-6:#F4DFB1;
   --color-5:#eee9dad3;
-  --color-6:#EEE9DA;
+  --color-4:#EEE9DA;
   --background-1: linear-gradient(180deg, rgba(38,38,38,1) 55%, rgba(69,69,69,1) 87%, rgba(108,108,108,1) 100%);
   --background-2:linear-gradient(0deg, rgba(38,38,38,1) 55%, rgba(69,69,69,1) 87%, rgba(108,108,108,1) 100%);
 
@@ -29,6 +29,7 @@ body {
   background: rgb(38,38,38);  
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  /* overflow-x: hidden; */
 }
 
 .nav-container {
@@ -67,7 +68,7 @@ body {
 .navbar-brand {
   height: 100%;
   font-family: 'Satisfy', cursive;
-  font-size: 40px;
+  font-size: 1.5rem;
   color: var(--color-4);
   padding-top: 2rem;
   padding-inline: 10px;
@@ -131,9 +132,9 @@ body {
   
 }
 
-.img-div .img {
-  max-width: 600px;
-  min-width: 320px;
+.img-div img {
+  /* max-width: 500px; */
+  min-width: 300px;
 }
 
 
@@ -150,12 +151,13 @@ body {
 
 .text-div h1 {
   font-size: 8.5vw;
+  font-size: 60px;
   font-weight: 600;
   padding: 0;
   margin: 0;
 }
 
-.contact-div, .button-div, .socmed-div, .text-div h1 {
+.contact-div, .button-div, .socmed-div, .text-div {
   text-align: center;
   margin-top: 2rem;
 }
