@@ -29,7 +29,7 @@ body {
   background: rgb(38,38,38);  
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .nav-container {
@@ -160,10 +160,12 @@ body {
 .right-div {
   height: 100%;
   width: 100%;
+  padding: 20px 0;
 }
 
 .right-div-content {
   height: 100%;
+  /* border: 1px solid red; */
 }
 
 .text-div {
@@ -192,7 +194,7 @@ body {
 
 .button-div button {
   border: 1px solid rgb(54, 173, 241);
-  font-size: 1.5rem;
+  font-size: clamp(0.85rem, 0.6568rem + 0.9369vw, 1.5rem);
   margin-inline: 30px;
   padding: 10px 15px;
 
@@ -212,14 +214,10 @@ body {
 }
 
 .button-div .dl-btn:hover {
-  background-color: var(--color-1);
-  border-radius: 0;
   transform: scale(1.1);
 }
 
 .button-div .msg-btn:hover {
-  background-color: var(--color-1);
-  border-radius: 0;
   transform: scale(1.1);
 }
 
@@ -260,10 +258,37 @@ body {
   body {
     font-size: 14px;
   }
+
+  .contact-div h5 span {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-inline: 5px;
+  }
  
 }
- 
 
+@media (max-width: 575px) {
+  .button-div button {
+    
+    margin-inline: 8px;
+    padding: 7px 12px;
+  
+  }
+
+  .contact-div h5 span {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-inline: 0;
+    margin-top: 5px;
+  }
+ 
+  .contact-div h5 .no-show {
+    display: none;
+  }
+}
+ 
+/* ANIMATION */
 @keyframes clockwiseSpin {
   from  {
     transform: rotate(0deg);
@@ -282,6 +307,14 @@ body {
   }	
 }
 
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+  90% {transform: translateY(0px);}
+}
+
+
 .clockwiseSpin {
    animation: clockwiseSpin 10s linear infinite;
 
@@ -290,3 +323,9 @@ body {
 .antiClockwiseSpin {
   animation: antiClockwiseSpin 10s linear infinite;
 }
+
+.bounce {
+  animation: bounce2 1.5s ease infinite;
+}
+
+
