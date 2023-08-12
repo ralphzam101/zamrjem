@@ -35,7 +35,6 @@ body {
 .nav-container {
   padding: 0;
   height: 120px;
- 
   justify-content: center;
   align-items: center;
   position: sticky;
@@ -68,7 +67,7 @@ body {
 .navbar-brand {
   height: 100%;
   font-family: 'Satisfy', cursive;
-  font-size: 1.5rem;
+  font-size: clamp(1.875rem, 1.3068rem + 2.8409vw, 3.4375rem);
   color: var(--color-4);
   padding-top: 2rem;
   padding-inline: 10px;
@@ -107,36 +106,61 @@ body {
   height: 100%;
 }
 
+
+
 /* HERO SECTION */
 
 .container-1 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgb(38,38,38); 
   background: var(--background-1);
   padding: 3rem 0;
 }
 
 .hero-div {
-  max-width: 80%;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
   margin: 0 auto;
   display: flex;
   gap: 20px;
+  /* border: 1px solid greenyellow; */
+}
+
+/* ------------------- LEFT DIV ----------------*/
+
+.left-div {
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid greenyellow; */
 }
 
 .img-div {
-  width: 100%;
   height: 100%;
-  
+  width: 100%;
 }
 
-.img-div img {
-  /* max-width: 500px; */
-  min-width: 300px;
+.img-div-rotate {
+  position: relative;
 }
 
+
+
+.img-div-rotate img {
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+
+
+/* ------------------- RIGHT DIV ----------------*/
+
+.right-div {
+  height: 100%;
+  width: 100%;
+}
 
 .right-div-content {
   height: 100%;
@@ -150,9 +174,7 @@ body {
 }
 
 .text-div h1 {
-  font-size: 8.5vw;
-  font-size: 60px;
-  font-weight: 600;
+  font-size: clamp(3.75rem, 0.625rem + 10vw, 8.125rem);
   padding: 0;
   margin: 0;
 }
@@ -212,19 +234,59 @@ body {
 }
 
 
+
 @media (max-width: 991px) {
   .nav-item a {
     background-color: var(--color-1);
    
   }
+
+  .navbar-brand {
+    padding-top: 2.5rem;
+    padding-inline: 0;
+    margin-left: 0;
+  }
+  
+
+  .hero-div {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 @media (max-width: 768px) {
 
   body {
     font-size: 14px;
   }
-  .hero-div {
-    flex-direction: column;
-  }
+ 
 }
  
+
+@keyframes clockwiseSpin {
+  from  {
+    transform: rotate(0deg);
+ }
+ to {
+    transform: rotate(360deg);
+  }	
+}
+
+@keyframes antiClockwiseSpin {
+  from  {
+    transform: rotate(360deg);
+ }
+ to {
+    transform: rotate(0deg);
+  }	
+}
+
+.clockwiseSpin {
+   animation: clockwiseSpin 10s linear infinite;
+
+}
+
+.antiClockwiseSpin {
+  animation: antiClockwiseSpin 10s linear infinite;
+}
