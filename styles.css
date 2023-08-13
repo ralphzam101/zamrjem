@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,300&family=Satisfy&display=swap');
 
-
 :root {
   --color-1: #222222;
   --color-2:#04293A;
@@ -8,11 +7,17 @@
   --color-6:#F4DFB1;
   --color-5:#eee9dad3;
   --color-4:#EEE9DA;
-  --background-1: linear-gradient(180deg, rgba(38,38,38,1) 55%, rgba(69,69,69,1) 87%, rgba(108,108,108,1) 100%);
-  --background-2:linear-gradient(0deg, rgba(38,38,38,1) 55%, rgba(69,69,69,1) 87%, rgba(108,108,108,1) 100%);
 
-  font-family: 'Satisfy', cursive;
+  --background-1: linear-gradient(180deg, rgba(38,38,38,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
+  --background-2: linear-gradient(0deg, rgba(38,38,38,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
+  
+  --background-3: linear-gradient(0deg, rgba(6,70,99,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
+  
+  --bg-color-1: rgb(38,38,38);
+  --bg-color-2: rgb(6,70,99);
+  
   font-family: 'Poppins', sans-serif;
+  font-family: 'Satisfy', cursive;
  
 }
 
@@ -26,7 +31,7 @@
 }
 
 body {
-  background: rgb(38,38,38);  
+  background: var(--bg-color-1);  
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -38,6 +43,9 @@ body {
   justify-content: center;
   align-items: center;
   position: sticky;
+  top: 0;
+  z-index: 4;
+  background: rgb(38,38,38)
 }
 
 .navbar {
@@ -60,8 +68,8 @@ body {
   height: 100%;
   text-align: right;
   justify-content: right;
-  background-color: none;
-  padding:  0;
+  background-color: transparent;
+  padding: 0;
 }
 
 .navbar-brand {
@@ -76,24 +84,30 @@ body {
 
 
 .nav-item a {
+  text-align: center;
   height: 100%;
   color: var(--color-4);
   font-size: 1.5rem;
   margin-left: 1.25rem;
   padding-inline: 10px;
   padding-top: 2.5rem;
- 
+  border-radius: 0 0 10px 10px;
 }
 
-.nav-item a:hover, .navbar-brand:hover {
+.nav-item a:hover  {
   background-color: var(--color-4);
   color: var(--color-1);
   border-radius: 0 0 10px 10px;
 }
 
+.navbar-brand:hover {
+  color: var(--color-6);
+  transform: scale(1.1);
+}
+
 .navbar-toggler {
   color: var(--color-4);
-  background-color: #F4DFB1;
+  background-color: var(--color-4);
   margin-top: 2rem;
 }
 
@@ -120,12 +134,12 @@ body {
 
 .hero-div {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   height: auto;
   margin: 0 auto;
+  padding-inline: 10px;
   display: flex;
   gap: 20px;
-  /* border: 1px solid greenyellow; */
 }
 
 /* ------------------- LEFT DIV ----------------*/
@@ -133,23 +147,28 @@ body {
 .left-div {
   height: 100%;
   width: 100%;
-  /* border: 1px solid greenyellow; */
+  padding-top: 70px;
+  text-align: center;
 }
 
 .img-div {
   height: 100%;
   width: 100%;
-}
+ }
 
 .img-div-rotate {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
+.img-div-rotate .hidden {
+  visibility: hidden;
+}
 
-
-.img-div-rotate img {
+.img-div-rotate .img {
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 0;
 }
 
@@ -165,7 +184,6 @@ body {
 
 .right-div-content {
   height: 100%;
-  /* border: 1px solid red; */
 }
 
 .text-div {
@@ -176,7 +194,8 @@ body {
 }
 
 .text-div h1 {
-  font-size: clamp(3.75rem, 0.625rem + 10vw, 8.125rem);
+  font-size: clamp(3.8rem, 0.625rem + 10vw, 8.125rem);
+  font-weight: 600;
   padding: 0;
   margin: 0;
 }
@@ -194,10 +213,9 @@ body {
 
 .button-div button {
   border: 1px solid rgb(54, 173, 241);
-  font-size: clamp(0.85rem, 0.6568rem + 0.9369vw, 1.5rem);
+  font-size: clamp(1rem, 0.6568rem + 0.9369vw, 1.5rem);
   margin-inline: 30px;
   padding: 10px 15px;
-
 }
 
 .button-div .dl-btn {
@@ -215,12 +233,15 @@ body {
 
 .button-div .dl-btn:hover {
   transform: scale(1.1);
+  border: 2px solid var(--color-6);
+  color: var(--color-6);
 }
 
 .button-div .msg-btn:hover {
   transform: scale(1.1);
+  border: 2px solid var(--color-6);
+  color: var(--color-6);
 }
-
 
 .socmed-div h3 i {
   font-size: 4rem;
@@ -229,66 +250,22 @@ body {
 
 .socmed-div h3 i:hover {
  transform: scale(1.1);
+ color: var(--color-6);
+}
+
+.antiClockwiseSpin {
+  animation: antiClockwiseSpin 10s linear infinite;
+}
+
+.bounce {
+  animation: bounce2 1.5s ease infinite;
 }
 
 
 
-@media (max-width: 991px) {
-  .nav-item a {
-    background-color: var(--color-1);
-   
-  }
 
-  .navbar-brand {
-    padding-top: 2.5rem;
-    padding-inline: 0;
-    margin-left: 0;
-  }
-  
+/* ---------------- KEYFRAMES ----------- */
 
-  .hero-div {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-}
-@media (max-width: 768px) {
-
-  body {
-    font-size: 14px;
-  }
-
-  .contact-div h5 span {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-inline: 5px;
-  }
- 
-}
-
-@media (max-width: 575px) {
-  .button-div button {
-    
-    margin-inline: 8px;
-    padding: 7px 12px;
-  
-  }
-
-  .contact-div h5 span {
-    display: block;
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-inline: 0;
-    margin-top: 5px;
-  }
- 
-  .contact-div h5 .no-show {
-    display: none;
-  }
-}
- 
-/* ANIMATION */
 @keyframes clockwiseSpin {
   from  {
     transform: rotate(0deg);
@@ -315,17 +292,103 @@ body {
 }
 
 
-.clockwiseSpin {
-   animation: clockwiseSpin 10s linear infinite;
 
+
+
+/* ------ MEDIA QUERIES -------- */
+@media (max-width: 991px) {
+
+  .container-1 {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+   .nav-item a {
+    background: rgb(38,38,38);
+    text-align: right;
+    border-radius: 0;
+    margin-left: 0;
+  }
+
+  .navbar-brand {
+    padding-top: 2.5rem;
+    padding-inline: 0;
+    margin-left: 0;
+  }
+  
+  .hero-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding-inline: 0;
+  }
+
+  .left-div {
+    height: auto;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .img-div-rotate{
+   text-align: center;
+  }
+
+  .img-div-rotate .img {
+    width: 100%;
+  }
+
+  .right-div {
+    height: 100%;
+    width: 100%;
+    padding: 0 ;
+  }
+  
 }
 
-.antiClockwiseSpin {
-  animation: antiClockwiseSpin 10s linear infinite;
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .contact-div h5 span {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-inline: 5px;
+  }
+ 
 }
 
-.bounce {
-  animation: bounce2 1.5s ease infinite;
+@media (max-width: 575px) {
+  .button-div button {
+    margin-inline: 8px;
+  }
+
+  .contact-div h5 span {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-inline: 0;
+    margin-top: 5px;
+  }
+ 
+  .contact-div h5 .no-show {
+    display: none;
+  }
 }
+ 
+
+@media (max-width: 320px ) {
+  
+  .button-div button {
+    margin-inline: 2px;
+    padding: 7px 12px;
+  }
+}
+
+
+
+
 
 
