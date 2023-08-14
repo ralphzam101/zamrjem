@@ -1,0 +1,4 @@
+        Hello! I'm Ralph, a passionate and creative front-end developer with a keen eye for design and a knack for turning ideas into captivating digital experiences. With my knowledge in HTML, CSS, and JavaScript, I can build a well designed websites and crafting user-friendly interfaces that leave a lasting impression.
+
+        My journey in web development began when I enrolled in a bootcamp, by then I was fascinated for the way code can shape the online world. Until  now I am exploring and enhancing the knowledge and skills that I have. I may be an entry level in terms of web development, but I know it is the path that I want and to build my career in the future.
+
