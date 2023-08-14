@@ -32,7 +32,6 @@ body {
   background: var(--bg-color-1);  
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 }
 
 .nav-container {
@@ -105,8 +104,9 @@ body {
 
 .navbar-toggler {
   color: var(--color-4);
-  background-color: var(--color-4);
-  margin-top: 2rem;
+  margin-top: 1rem;
+  border: 0;
+  font-size: 2rem;
 }
 
 .nav-item a:focus {
@@ -345,7 +345,10 @@ body {
 
 @media (max-width: 991px) {
 
-  
+  .nav-container {
+    height: 90px;
+  }
+
   .container-1 {
     height: auto;
     padding: 1rem 0;
@@ -356,12 +359,20 @@ body {
     text-align: right;
     border-radius: 0;
     margin-left: 0;
+    padding-top: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .nav-item a:hover {
+    border-radius: 0;
   }
 
   .navbar-brand {
     padding-inline: 0;
     margin-left: 0;
+    padding-top: .75rem;
   }
+
   
   .hero-div {
     flex-direction: column;
@@ -399,6 +410,10 @@ body {
     font-size: 14px;
   }
 
+  .navbar-brand {
+    padding-top: 1.25rem;
+  }
+
   .contact-div h5 span {
     font-size: 1.25rem;
     font-weight: 300;
@@ -408,10 +423,6 @@ body {
 }
 
 @media (max-width: 575px) {
-
-  .navbar-brand {
-    padding-top: 2.5rem;
-  }
 
   .button-div button {
     margin-inline: 8px;
@@ -432,6 +443,9 @@ body {
  
 
 @media (max-width: 320px ) {
+  .left-div {
+    width: 100%;
+  }
 
   .button-div button {
     margin-inline: 2px;
