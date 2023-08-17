@@ -10,9 +10,7 @@
 
   --background-1: linear-gradient(180deg, rgba(38,38,38,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
   --background-2: linear-gradient(0deg, rgba(38,38,38,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
-  
-  --background-3: linear-gradient(0deg, rgba(6,70,99,1) 50%, rgba(103,102,102,1) 75%, rgba(129,129,129,1) 100%);
-  
+ 
   --bg-color-1: rgb(38,38,38);
   --bg-color-2: rgb(6,70,99);
   
@@ -28,13 +26,14 @@
   /* border: 1px solid red; */
 }
 
-
 body {
   background: var(--bg-color-1);  
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* ----- NAV BAR ------ */
 .nav-container {
   padding: 0;
   height: 120px;
@@ -122,7 +121,6 @@ body {
 
 
 /* --------- HERO SECTION --------- */
-
 .container-1 {
   width: 100%;
   height: auto;
@@ -142,7 +140,6 @@ body {
 }
 
 /* ------------------- LEFT DIV ----------------*/
-
 .left-div {
   height: 100%;
   width: 100%;
@@ -174,7 +171,6 @@ body {
 
 
 /* ------------------- RIGHT DIV ----------------*/
-
 .right-div {
   height: 100%;
   width: 100%;
@@ -265,7 +261,6 @@ body {
 
 
 /* ------- ABOUT ME -------- */
-
 .container-2 {
   width: 100%;
   background: rgb(38,38,38); 
@@ -285,7 +280,7 @@ body {
 }
 
 .about-div h1 {
-  font-size: clamp(3.8rem, 0.625rem + 10vw, 8.125rem);
+  font-size: clamp(3.5rem, 0.625rem + 10vw, 8.125rem);
   text-align: center;
 }
 
@@ -305,8 +300,8 @@ body {
   font-family: 'Satisfy', cursive;
   font-size: 1.5em;
   color: var(--color-6);
-  
 }
+
 .middle-about-div img {
   min-width: 200px
 }
@@ -322,7 +317,6 @@ body {
 
 
 /* --------- PROJECTS --------- */
-
 .container-3 {
   width: 100%;
   height: auto;
@@ -339,22 +333,25 @@ body {
 
 .project-div {
   width: 100%;
-  max-width: 1700px;
+  max-width: 1400px;
   display: flex;
   gap: 30px;
   margin: 4rem auto;
-  
 }
 
 .card {
+  width: 500px;
+  min-width: 300px;
+  height: auto;
   border: 4px solid var(--color-6);
   border-radius: 20px;
-  padding: 15px 20px;
+  padding: 10px;
   background-color: transparent;
 }
 
 .card-img img {
   border-radius: 15px 15px 0 0;
+  object-fit: cover;
 }
 
 .card-body {
@@ -368,18 +365,19 @@ body {
   border-radius: 15px;
   font-size: 1.125rem;
   text-align: justify;
+  height: 100px;
 }
 
 .bottom-div {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 
 .bottom-div h5 span i{
-  font-size: 2.5rem;
- 
+  font-size: 2.125rem;
 }
 
 .bottom-div button {
@@ -401,8 +399,9 @@ body {
 
 
 
-/* ------ CONTACTS ------- */
 
+
+/* ------ CONTACTS ------- */
 .container-4 {
   width: 100%;
   background: rgb(38,38,38); 
@@ -435,15 +434,19 @@ body {
 .left-contact-div {
   width: 60%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .details-div {
- padding-left: 40px;
+  width: auto;
+  padding-left: 40px;
 }
 
 .details-div h2 {
-  font-family: 'Satisfy', cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .details-div h3 {
@@ -458,25 +461,24 @@ body {
 
 
 /* FOOTER */
-
 footer {
   margin-top: 200px;
   width: 100%;
-  height: 100px;
-  margin-bottom: 50px;
-  
+  height: 60px;
+  margin-bottom: 0;
 }
 
 footer h3 {
   min-width: 300px;
   margin: 0 auto;
-  font-size: 1.75rem;
+  font-size: 1rem;
   text-align: center;
+  margin-top: 100px;
 }
 
-footer h3 span {
+footer span .cursive{
   font-family: 'Satisfy', cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 
@@ -556,7 +558,9 @@ footer h3 span {
   .card {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin-inline: auto;
+    width: 80%;
+    min-width: 800px;
   }
 
   .card-img {
@@ -584,14 +588,14 @@ footer h3 span {
   }
 
   .details-div {
-    width: 100%;
+    width: auto;
     max-width: 600px;
     margin: 0 auto;
     padding-left: 10px;
   }
    
   .details-div h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
    
   .details-div h3 {
@@ -601,8 +605,6 @@ footer h3 span {
   .details-div i {
     font-size: 2rem;
   }
-   
-
 
 }
 
@@ -670,7 +672,6 @@ footer h3 span {
 
   .right-about-div {
     grid-column: 2 / span 2 ;
-    
   }
 
   .about-div {
@@ -678,14 +679,16 @@ footer h3 span {
   }
 
   .project-div {
-    max-width: 85%;
+    max-width: 90%;
     flex-direction: column;
   }
 
   .card {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin-inline: auto;
+    width: 80%;
+    min-width: 700px;
   }
   
   .card-img {
@@ -709,9 +712,11 @@ footer h3 span {
   .reverse {
     flex-direction: row-reverse;
   }
+
   .reverse-img img{
     border-radius: 0 15px 15px 0;
   }
+
   .reverse-body {
     border-radius: 15px 0 0 15px;
   }
@@ -724,21 +729,22 @@ footer h3 span {
 
   .right-contact-div {
     width: 70%;
+    max-width: 500px;
   }
   
   .left-contact-div {
-    width: 100%; 
+    width: auto; 
   }
 
   .details-div {
-    width: 100%;
+    width: auto;
     max-width: 650px;
     padding-left: 0;
     margin: 0 auto;
   }
    
   .details-div h2 {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
    
   .details-div h3 {
@@ -749,12 +755,11 @@ footer h3 span {
   .details-div i {
     font-size: 1.75rem;
   }
-   
-
 
 }
 
 @media (max-width: 768px) {
+
   body {
     font-size: 14px;
   }
@@ -782,7 +787,11 @@ footer h3 span {
   .card {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    width: 80%;
+    min-width: 400px;
   }
 
   .card-img {
@@ -795,6 +804,10 @@ footer h3 span {
     padding: 10px 0;
   }
 
+  .card-body h4 {
+    height: auto;
+  }
+
   .card-img img {
     height: 100%;
     border-radius: 15px 15px 0 0;
@@ -805,7 +818,7 @@ footer h3 span {
   }
 
   .details-div h2 {
-    font-size: 2.4rem;
+    font-size: clamp(1.75rem, 1rem + 2.0833vw, 2rem);
   }
    
   .details-div h3 {
@@ -820,9 +833,13 @@ footer h3 span {
 }
 
 @media (max-width: 575px) {
-
+  .container-2, .container-4 {
+    padding-inline: 1rem;
+  }
+ 
   .button-div button {
-    margin-inline: 8px;
+    margin-inline: 5px;
+    padding: 7px 12px;
   }
 
   .contact-div h5 span {
@@ -854,12 +871,21 @@ footer h3 span {
     display:block;
     margin: 3rem auto;
   }
+  .card {
+    width: 90%;
+    min-width: 300px;
+  }
 
   .card-body h4{
     font-size: 1rem;
     padding: 0 5px;
+    height: auto;
   }
-    
+
+  .bottom-div {
+    flex-direction: column;
+  }
+
   .bottom-div button {
     padding: 8px 12px;
   }
@@ -869,23 +895,32 @@ footer h3 span {
   }
 
   .details-div h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.0522rem + 4.7244vw, 1.75rem);
   }
    
   .details-div h3 {
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 0.1181rem + 3.1496vw, 1.25rem);
     margin-top: 8px;
   }
    
   .details-div i {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+  }
+
+  .container-4 {
+    padding-inline: .5rem;
   }
   
+  footer h3 {
+   display: flex;
+   flex-direction:column;
+  }
 
 }
  
 
 @media (max-width: 320px ) {
+
   .left-div {
     width: 100%;
   }
@@ -896,7 +931,7 @@ footer h3 span {
   }
 
   .details-div h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
    
   .details-div h3 {
@@ -906,6 +941,14 @@ footer h3 span {
    
   .details-div i {
     font-size: 1rem;
+  }
+
+  .container-2 {
+    padding-inline: .5rem;
+  }
+
+  .container-4 {
+    padding-inline: 0;
   }
 }
 
