@@ -213,31 +213,33 @@ body {
 }
 
 .button-div .dl-btn {
-  background-color: transparent;
-  border: 2px solid var(--color-4);
-  border-radius: 15px;
-}
-
-.button-div .msg-btn {
   border: 3px solid var(--color-1);
   background-color: var(--color-6);
   border-radius: 15px;
   color: var(--color-1);
   font-weight: 600;
 }
-.button-div .msg-btn i {
+
+.button-div .msg-btn {
+  background-color: transparent;
+  border: 2px solid var(--color-4);
+  border-radius: 15px;
+}
+
+.button-div .dl-btn i {
   color: var(--color-1);
 }
 
 .button-div .dl-btn:hover {
   transform: scale(1.1);
-  border: 2px solid var(--color-6);
-  color: var(--color-6);
+  border: 1px solid var(--color-6);
+  color: var(--color-1);
 }
 
 .button-div .msg-btn:hover {
   transform: scale(1.1);
-  border: 2px solid var(--color-1);
+  border: 1px solid var(--color-6);
+  color: var(--color-6);
 }
 
 .socmed-div h3 i {
